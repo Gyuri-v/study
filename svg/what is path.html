@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>path의 형태</title>
+
+	<style>
+        @font-face {
+        font-family: 'KOTRA_BOLD-Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    body{ font-family: 'KOTRA_BOLD-Bold'; }
+    a{ color: lightcoral; }
+    .wrap{ width: 100%; padding: 100px 20px; }
+    .title{ width: 100%; max-width: 1200px; margin: 30px auto; font-size: 36px; }
+    .text{ width: 100%; max-width: 1200px; margin: 30px auto; font-size: 20px; }
+    .svg_item{ overflow: hidden; width: 100%; max-width: 1200px; height: 600px; margin: auto; border-radius: 40px; box-shadow: 0 0 40px rgba(0,0,0,0.1); }
+    .ck{ color: #ac0621; text-decoration: none; font-style: normal; }
+    </style>
+</head>
+<body>
+
+<h4 class="title">💗 참고 사이트 <a href="http://tlog.tammolo.com/blog/SVG-Paths/">TOMM님 블로그</a>  보면서 하나씩 해보는중</h4>
+
+<div class="wrap">
+    <h4 class="title">1. <i class="ck">M</i>oveto <i class="ck">L</i>ineto <i class="ck">H</i>orizontal <i class="ck">V</i>ertical</h4>
+	<div class="svg_item svg_item01">
+		<svg class="mlhv" width="400" height="400" viewbox="0 0 200 200">
+            <style>
+                .svg_item01{ display: flex; justify-content: center; }
+                .mlhv{ margin-top: 100px; }
+            </style>
+		    <path d="M 10 10 h 90 v 90 h 90 l 0 90" fill="none" stroke="#ac0621" stroke-width="5" />
+		</svg>
+	</div>
+</div>
+
+<div class="wrap">
+    <h4 class="title">2. C</h4>
+    <p class="text">C x1 y1, x2 y2, x y (c dx1 dy1, dx2 dy2, dx dy)</p>
+	<div class="svg_item svg_item01">
+		<svg class="mlhv" width="400" height="400" viewbox="0 0 200 200">
+            <style>
+                .svg_item01{ display: flex; justify-content: center; }
+                .mlhv{ margin-top: 100px; }
+            </style>
+		    <path d="M 10 10 C 50 50, 90 150, 190 10" fill="none" stroke="#ac0621" stroke-width="5" />
+		</svg>
+	</div>
+</div>
+
+<div class="wrap">
+    <h4 class="title">3. Q</h4>
+    <p class="text">Q x1 y1, x y (q dx1 dy1, dx dy)</p>
+	<div class="svg_item svg_item01">
+		<svg width="600" height="600" viewbox="0 0 190 160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>
+        </svg>
+	</div>
+</div>
+
+<div class="wrap">
+    <h4 class="title">4. S</h4>
+    <p class="text">S x2 y2, x y (s dx2 dy2, dx dy)</p>
+	<div class="svg_item svg_item01">
+		<svg width="600" height="600" viewbox="0 0 190 160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+        </svg>
+	</div>
+</div>
+
+<div class="wrap">
+    <h4 class="title">5. A</h4>
+    <p class="text">A rx ry x축-회전각 큰-호-플래그 쓸기-방향-플래그 x y</p>
+	<div class="svg_item svg_item01">
+		<svg width="600" height="600" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 315
+                   L 110 215
+                   A 30 50 0 0 1 162.55 162.45" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
+        </svg>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
